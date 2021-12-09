@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+}
+
+.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .card{
+    position: relative;
+}
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: all 0.4s linear;
+}
+.container .card .face.front{
+    position: relative;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    
+}
+.container .card:hover .face.front{
+ 	transform: translateY(0px);
+    box-shadow: inset 0 0 60px whitesmoke,
+                inset 20px 0 80px #f0f,
+                inset -20px 0 80px #0ff,
+                inset 20px 0 300px #f0f,
+                inset -20px 0 300px #0ff,
+                0 0 50px #fff,
+                -10px 0 80px #f0f,
+                10px 0 80px #0ff;  
+}
+.container .card .face.front .content{
+    opacity: 0.2;
+    transition: all 0.5s linear;
+    text-align: center;
+}
+.container .card:hover .face.front .content{
+    opacity: 1;
+}
+.card .face.front .content i{
+    font-size: 3rem;
+    color: #fff;
+    display: inline-block;
+}
+.card .face.front .content h3{
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+}
+.container .card .face.back{
+    position: relative;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    
+}
+.container .card:hover .face.back{
+    transform: translateY(0px);
+}
+.container .card .face.back .content p, a{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.container .card .face.back .content a{
+    text-decoration: none;
+    color: black;
+    outline: 1px dashed #333;
+    padding: 10px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
